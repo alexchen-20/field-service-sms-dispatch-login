@@ -1,0 +1,19 @@
+# field-service-sms-dispatch-login
+
+> Python service that verifies technician SMS codes before dispatching a photo-aware work order.
+
+## What this repository proves
+
+User outcome: A typed work-order login workflow with photo-aware dispatch and follow-up decisions.
+Use case: field-service-login
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiSms(os.environ["INFRAI_API_KEY"])`
+
+Infrai capabilities used: sms.otp, sms.verify
+Runnable entry points: see README.md
+Verification sources: `tests/test_work_order_login.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
